@@ -1,4 +1,10 @@
-export type StorageValue = null | string | number | boolean | object;
+export type StorageValue =
+  | null
+  | string
+  | number
+  | boolean
+  | object
+  | StorageValue[];
 export type WatchEvent = "update" | "remove";
 export type WatchCallback = (event: WatchEvent, key: string) => any;
 

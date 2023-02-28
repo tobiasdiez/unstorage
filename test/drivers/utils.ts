@@ -34,14 +34,16 @@ export function testDriver(opts: TestOptions) {
     await ctx.storage.setItem("s1:a", "test_data");
     await ctx.storage.setItem("s2:a", "test_data");
     await ctx.storage.setItem("s3:a?q=1", "test_data");
+    await ctx.storage.setItem("s4:a", [1, "b", 3]);
     expect(await ctx.storage.hasItem("s1:a")).toBe(true);
     expect(await ctx.storage.getItem("s1:a")).toBe("test_data");
     expect(await ctx.storage.getItem("s3:a?q=2")).toBe("test_data");
+    expect(await ctx.storage.getItem("s4:a")).toMatchObject([1, "b", 3]);
   });
 
   it("getKeys", async () => {
     expect(await ctx.storage.getKeys().then((k) => k.sort())).toMatchObject(
-      ["s1:a", "s2:a", "s3:a"].sort()
+      ["s1:a", "s2:a", "s3:a", "s4:a"].sort()
     );
     expect(await ctx.storage.getKeys("s1").then((k) => k.sort())).toMatchObject(
       ["s1:a"].sort()
