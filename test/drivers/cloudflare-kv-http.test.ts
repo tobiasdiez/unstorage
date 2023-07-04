@@ -3,7 +3,6 @@ import driver, { KVHTTPOptions } from "../../src/drivers/cloudflare-kv-http";
 import { testDriver } from "./utils";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
-import { snapshot } from "../../src";
 
 const baseURL =
   "https://api.cloudflare.com/client/v4/accounts/:accountId/storage/kv/namespaces/:namespaceId";
