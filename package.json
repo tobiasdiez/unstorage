@@ -76,6 +76,7 @@
     "@vue/compiler-sfc": "^3.3.4",
     "azurite": "^3.25.1",
     "changelogen": "^0.5.4",
+    "dotenv": "^16.3.1",
     "eslint": "^8.47.0",
     "eslint-config-unjs": "^0.2.1",
     "fake-indexeddb": "^4.0.2",
@@ -103,10 +104,10 @@
     "@azure/keyvault-secrets": "^4.7.0",
     "@azure/storage-blob": "^12.15.0",
     "@capacitor/preferences": "^5.0.6",
-    "idb-keyval": "^6.2.1",
     "@planetscale/database": "^1.10.0",
     "@upstash/redis": "^1.22.0",
-    "@vercel/kv": "^0.2.2"
+    "@vercel/kv": "^0.2.2",
+    "idb-keyval": "^6.2.1"
   },
   "peerDependenciesMeta": {
     "@azure/app-configuration": {
